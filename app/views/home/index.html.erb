@@ -3,11 +3,13 @@
 <div class="container">
   <ul>
   <% @categories.each do  |category|%>
-  <li><%= category.title  %></li>
+  <li class="btn btn-outline-secondary"><%= category.title  %></li>
+  <% end %>
+  <% @categories.each do  |category|%>
   <div class="card">
     <ul>
       <% category.tasks.each do |task|  %>
-      <li>
+      <li class="">
         <%= task.title  %>
         <% unless task.deadline.nil? %>
           , to read: <%= task.deadline.strftime('%D')  %>

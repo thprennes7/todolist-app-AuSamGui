@@ -14,3 +14,41 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require jquery-3.3.1.min.js
+//= require jquery.validate.js
+$(document).ready(() => {
+
+  let $cardDiv = $("ul > div.card"), $li = $(".btn-outline-secondary");
+
+  console.log($cardDiv);
+  console.log($li);
+
+
+  $cardDiv.hide();
+  $($cardDiv[0]).show();
+
+  for (let x = 0; x < $li.length; x++){
+    $($li[x]).on('click', () => {
+      for (let y = 0; y < $li.length; y++){
+        if (y !== x){
+          $($cardDiv[y]).hide();
+          console.log(`Slided up ${$cardDiv[y]}`);
+        };
+      };
+      $($cardDiv[x]).show();
+      console.log(`Slided down ${$cardDiv[x]}`);
+    });
+  };
+
+  let $avatarImg = $(".rounded-circle"), $userAction = $("#user-action");
+
+  $userAction.hide();
+
+  $avatarImg.on('click', () => {
+    $userAction.slideToggle(200);
+  })
+
+  $userAction.on('mouseleave', () => {
+    $userAction.slideUp();
+  })
+})
