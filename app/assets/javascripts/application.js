@@ -20,9 +20,6 @@ $(document).ready(() => {
 
   let $cardDiv = $("ul > div.card"), $li = $(".btn-outline-secondary");
 
-  console.log($cardDiv);
-  console.log($li);
-
 
   $cardDiv.hide();
   $($cardDiv[0]).show();
@@ -32,11 +29,9 @@ $(document).ready(() => {
       for (let y = 0; y < $li.length; y++){
         if (y !== x){
           $($cardDiv[y]).hide();
-          console.log(`Slided up ${$cardDiv[y]}`);
         };
       };
       $($cardDiv[x]).show();
-      console.log(`Slided down ${$cardDiv[x]}`);
     });
   };
 
@@ -51,4 +46,13 @@ $(document).ready(() => {
   $userAction.on('mouseleave', () => {
     $userAction.slideUp();
   })
+  $loginModal = $(".login-modal"); $loginBtn = $('.nav-link:contains("Log in")')
+  console.log($loginBtn)
+
+  $loginBtn.click( (event) => {
+    event.preventDefault();
+    $loginModal.toggle()
+  })
+
+  s
 })
