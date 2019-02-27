@@ -1,5 +1,7 @@
 <div class="login-modal" style="display: none;">
+
   <h2>Log in</h2>
+  <%= fa_icon "times", id: "close" %>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">

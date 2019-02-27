@@ -54,5 +54,9 @@ $(document).ready(() => {
     $loginModal.toggle()
   })
 
-  s
+  $closeIcon = $('#close');
+
+  $closeIcon.click( () => {
+    $loginModal.hide();
+  })
 })

@@ -7,7 +7,7 @@
   <% end %>
   <% @categories.each do  |category|%>
   <div class="card">
-    <ul>
+    <ul id="tasks">
       <% category.tasks.each do |task|  %>
       <li class="">
         <%= task.title  %>

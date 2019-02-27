@@ -34,3 +34,17 @@
   height: 100vh;
   z-index: -5;
 }
+
+#close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  color: #2b2b2b;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+#close:hover {
+  color: #818181;
+  transform: scale(1.3);
+}
