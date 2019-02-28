@@ -3,7 +3,7 @@
   <h1 class="offset-1">Emails <%= current_user.email if user_signed_in? %>:</h1>
   <div class="row mail-table">
     <div class="col-4 mail-list offset-1">
-      <% @emails.each do |email| %>
+      <% @emails.sort.each do |email| %>
       <h3 class="row pl-4 pr-4 title <%= email.id %> <%= "unread" unless is_read(email.id)  %>"><%= link_to "#{email.object}", email_path(email.id), remote: true %></h3>
 
       <% end %>
