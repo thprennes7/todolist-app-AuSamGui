@@ -1,2 +1,3 @@
 $(".mail").remove();
+$($(".<%= @email.id %>")[0]).removeClass("unread")
 $(".mail-reader").prepend("<%= j render 'mail', email: @email %>");
