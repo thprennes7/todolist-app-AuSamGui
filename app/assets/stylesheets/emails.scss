@@ -45,7 +45,8 @@
   color: #555555;
 }
 
-.unread {
+.unread a{
   font-weight: bold;
-  background-color: rgb(236, 153, 67);
+  color: #ff6600;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAFUlEQVQImWNgQAL/0xj+k8phYGAAAEY/CZHpyg1eAAAAAElFTkSuQmCC) repeat;
 }
