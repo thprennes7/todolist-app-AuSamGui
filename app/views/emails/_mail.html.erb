@@ -1,6 +1,8 @@
-<div class="mail">
+<div class="mail <%=email.id%>">
 
-<h2><%= email.object %></h2>
-<p><%= email.body %></p>
-
+  <h2><%= email.object %></h2>
+    <p><%= email.body %></p>
+    <%= link_to email_path(email), method: :delete, data: {confirm: "Are you sure?"}, id: 'delete-mail', remote: true do %>
+    <%= fa_icon 'trash'%> Supprimer
+    <% end %>
 </div>

@@ -1,0 +1,9 @@
+
+let $mail = $('.<%= @email.id %>');
+console.log($mail);
+for (let x = 0; x < $mail.length; x++) {
+  $($mail[x]).slideUp(500);
+  setTimeout(function(){
+    $($mail[x]).remove();
+  }, 500)
+}

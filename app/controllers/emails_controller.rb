@@ -10,8 +10,16 @@ class EmailsController < ApplicationController
 
   def destroy
     @email= Email.find(params[:id])
-    @email.destroy
-    flash[:notice] = "Mail supprimé"
-    redirect_to root_path
+    respond_to do |format|
+      format.html do
+        @email.destroy
+        flash[:notice] = "Mail supprimé"
+        redirect_to root_path
+      end
+      format.js do
+        @email.destroy
+        flash[:notice] = "Mail supprimé"
+      end
+    end
   end
 end
