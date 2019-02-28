@@ -1,0 +1,13 @@
+<div class="container mb-4">
+
+  <div class="row mail-table">
+    <div class="col-4 mail-list">
+      <% @emails.each do |email| %>
+      <h2 class="row pl-4 pr-4"><%= link_to "#{email.object}", email_path(email.id), remote: true %></h2>
+      <% end %>
+    </div>
+    <div class="col-6 mail-reader">
+
+    </div>
+  </div>
+</div>

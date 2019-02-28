@@ -1,0 +1,24 @@
+// Place all the styles related to the Emails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.mail-table {
+  height: 80vh;
+}
+
+.mail-list {
+  padding: 25px;
+  height: 80vh;
+  overflow: auto;
+  border: 1px solid #7c7c7c;
+  border-radius: 10px 0 0 10px;
+}
+
+.mail-reader {
+  padding: 25px;
+  height: 80vh;
+  overflow: auto;
+  border: 1px solid #7c7c7c;
+  border-radius: 0 10px 10px 0;
+  border-left: none;
+}
